@@ -10,8 +10,12 @@ class MakersBnB < Sinatra::Base
   get '/' do
     "MakersBnB"
   end
-end
 
+
+get '/spaces' do
+  "space_1"
+end
+end 
 
 require './models'
 
