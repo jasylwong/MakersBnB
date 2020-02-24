@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
+      "/Users/student/Desktop/Week6/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
         "lines": [
           1,
           1,
@@ -12,7 +12,7 @@
           null
         ]
       },
-      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/testing_signing_up_spec.rb": {
+      "/Users/student/Desktop/Week6/MakersBnB/spec/features/testing_signing_up_spec.rb": {
         "lines": [
           1,
           1,
@@ -33,8 +33,24 @@
           null,
           null
         ]
+      },
+      "/Users/student/Desktop/Week6/MakersBnB/spec/makersbnb_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1582558028
+    "timestamp": 1582559459
   }
 }
