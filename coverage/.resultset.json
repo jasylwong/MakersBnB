@@ -34,6 +34,16 @@
           null
         ]
       },
+      "/Users/student/Desktop/Week6/MakersBnB/spec/features/viewing_spaces_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/student/Desktop/Week6/MakersBnB/spec/makersbnb_spec.rb": {
         "lines": [
           1,
@@ -51,6 +61,6 @@
         ]
       }
     },
-    "timestamp": 1582559459
+    "timestamp": 1582559677
   }
 }
