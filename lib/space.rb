@@ -1,5 +1,5 @@
 class Space
-
+    
     def initialize(name, description, price, host)
     @name = name
     @description = description
@@ -9,6 +9,10 @@ class Space
 
 def self.create(name, description, price, host)
     space = Space.new(name, description, price, host)
+end
+
+def self.all
+    return ['space_1', 'space_mansion'];
 end
 
 attr_reader :name, :description, :price, :host

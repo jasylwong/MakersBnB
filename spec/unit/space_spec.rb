@@ -9,4 +9,12 @@ describe 'Space' do
 
         end
     end
+
+    describe '.all' do
+        it 'shopes a list of all spaces' do
+            spaces = Space.all
+            expect(spaces).to include "space_1"
+            expect(spaces).to include "space_mansion"
+        end
+    end
 end
