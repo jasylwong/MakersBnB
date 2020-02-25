@@ -33,7 +33,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/sign_up' do
-    "Please enter you details"
+    "Please enter your details"
   end
   
   run! if app_file == $0
