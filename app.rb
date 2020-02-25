@@ -3,10 +3,10 @@ require 'sinatra/base'
 require 'sinatra/activerecord'
 require 'sinatra/base'
 require 'sinatra/flash'
-require_relative './lib/space.rb'
-require 'json'
-
-set :database, "sqlite3:project-name.sqlite3"
+require './models/booking.rb'
+require './models/space.rb'
+require './models/user.rb'
+require './models/listing.rb'
 
 class MakersBnB < Sinatra::Base
   enable :session
@@ -32,8 +32,12 @@ class MakersBnB < Sinatra::Base
     erb :spaces_new
   end
 
+  get '/sign_up' do
+    "Please enter your details"
+  end
+  
   run! if app_file == $0
 end 
 
-require './models'
+
 
