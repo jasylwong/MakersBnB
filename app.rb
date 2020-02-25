@@ -1,18 +1,27 @@
 require 'sinatra'
-# require 'sinatra-base'
+require 'sinatra/base'
 require 'sinatra/activerecord'
 require 'sinatra/base'
 require 'sinatra/flash'
+require_relative './lib/space.rb'
+require 'json'
 
 set :database, "sqlite3:project-name.sqlite3"
 
 class MakersBnB < Sinatra::Base
+  enable :session
+
   get '/' do
-    File.read('./views/index.html')
+    @spaces = Space.all
+    erb :index
   end
 
   get '/spaces' do
-    "space_1 Space Mansion £50 Lovely space!"
+    @spaces = Space.all
+    @get_spaces = {}
+    @spaces.each { |space| @get_spaces[space.name] = space.description }
+    @get_spaces.to_json
+    # "space_1 Space Mansion £50 Lovely space!"
   end
 
   post '/spaces' do
