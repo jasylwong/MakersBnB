@@ -32,16 +32,16 @@ class MakersBnB < Sinatra::Base
     erb :spaces_new
   end
 
-  get '/sign_up/new' do
-    erb :"sign_up/new"
+  get '/sign_up' do
+    erb :sign_up
   end
 
-  post '/sign_up' do
-    user = User.create(name: params['name'], email: params['email'], password: params['password'])
-    redirect '/welcome'
+  # post '/sign_up' do
+  #   user = User.create(name: params['name'], email: params['email'], password: params['password'])
+  #   redirect '/welcome'
 
 
-  end
+  # end
   
   run! if app_file == $0
 end 
