@@ -1,4 +1,5 @@
 require_relative '../app.rb'
+require_relative '../lib/space.rb'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'

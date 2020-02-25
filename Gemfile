@@ -14,6 +14,7 @@ gem 'pg'
 gem 'pry'
 gem 'sinatra'
 gem 'sinatra-flash'
+gem 'json'
 
 group :test do
   gem 'capybara'
