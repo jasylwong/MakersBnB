@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/activerecord'
-require 'sinatra/base'
 require 'sinatra/flash'
 require './models/booking.rb'
 require './models/space.rb'
@@ -39,8 +38,6 @@ class MakersBnB < Sinatra::Base
   # post '/sign_up' do
   #   user = User.create(name: params['name'], email: params['email'], password: params['password'])
   #   redirect '/welcome'
-
-
   # end
   
   run! if app_file == $0

@@ -20,7 +20,4 @@ $( document ).ready(function() {
     console.log("hello")
     $('#test').text(5);
   });
-
-  alert("Testing alert")
-
 });
