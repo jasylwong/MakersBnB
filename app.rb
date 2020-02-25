@@ -32,8 +32,15 @@ class MakersBnB < Sinatra::Base
     erb :spaces_new
   end
 
-  get '/sign_up' do
-    "Please enter your details"
+  get '/sign_up/new' do
+    erb :"sign_up/new"
+  end
+
+  post '/sign_up' do
+    user = User.create(name: params['name'], email: params['email'], password: params['password'])
+    redirect '/welcome'
+
+
   end
   
   run! if app_file == $0
