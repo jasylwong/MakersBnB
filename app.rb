@@ -32,6 +32,10 @@ class MakersBnB < Sinatra::Base
     erb :spaces_new
   end
 
+  get '/sign_up' do
+    "Please enter you details"
+  end
+  
   run! if app_file == $0
 end 
 
