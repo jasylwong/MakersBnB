@@ -2,12 +2,19 @@
 <html>
 <head>
     <title>New space</title>
+    <link type='text/css' rel='stylesheet' href='/css/styles.css'>
 </head>
 <body>
+<h1>Create a space</h1>
   <form action="/spaces" method="post">
-    <input type="text" name="name" required/>
-    <input type="text" name="description" required/>
-    <input type="text" name="price" required/>
+    <label for="name">Name:</label></br>
+    <input type="text" name="name" required/></br></br>
+    <label for="description">Description:</label></br>
+    <input type="text" name="description" required/></br></br>
+    <label for="price">Price:</label></br>
+    <input type="text" name="price" required/></br></br>
+    <label for="photo_url">Photo:</label></br>
+    <input type="text" name="photo_url" required/></br>
     <input type="submit" value="Submit"/>
   </form>
 </body>
