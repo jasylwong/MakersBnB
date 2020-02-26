@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/create_space_spec.rb": {
+      "/Users/jack/Documents/MAKERs bnb/MakersBnB/spec/features/create_space_spec.rb": {
         "lines": [
           1,
           1,
@@ -16,7 +16,7 @@
           null
         ]
       },
-      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/sign_up_spec.rb": {
+      "/Users/jack/Documents/MAKERs bnb/MakersBnB/spec/features/logging_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -25,6 +25,34 @@
           null,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jack/Documents/MAKERs bnb/MakersBnB/spec/features/sign_up_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -55,7 +83,7 @@
           null
         ]
       },
-      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
+      "/Users/jack/Documents/MAKERs bnb/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
         "lines": [
           1,
           1,
@@ -94,10 +122,23 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/unit/space_spec.rb": {
+      "/Users/jack/Documents/MAKERs bnb/MakersBnB/spec/unit/space_spec.rb": {
         "lines": [
           1,
           1,
