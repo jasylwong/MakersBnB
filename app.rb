@@ -11,8 +11,6 @@ class MakersBnB < Sinatra::Base
   enable :sessions
 
   get '/' do
-    @spaces = Space.all
-    p @spaces
     erb :index
   end
 
@@ -38,7 +36,6 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/users' do
-    @users = User.all
     User.create(name: params['name'], email: params['email'], password: params['password'])
     redirect '/welcome'
   end
