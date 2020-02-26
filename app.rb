@@ -34,6 +34,10 @@ class MakersBnB < Sinatra::Base
     erb :sign_up
   end
 
+  get '/login' do
+    erb :login
+  end
+
   get '/session/new' do 
     erb ":session/new"
   end
