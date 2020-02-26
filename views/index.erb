@@ -12,11 +12,17 @@
   <script src="/js/interface.js"></script>
   
   <h1>MakersBnB</h1>
-  <div id="show-space">4</div>
-
   <button id="test-button">Test</button>
-  <div id="test"></div>
-  
+  <div id="test"></div></br>
+
+  <% @spaces.each do |space| %>
+    Name: <%= space.name %></br>
+    Description: <%= space.description %></br>
+    Price per night: <%= space.price %></br></br>
+  <% end %>
+
+  </br></br>
+  <a href="/sign_up">Sign up </a>
 </body>
 </html>
 
