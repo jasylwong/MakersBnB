@@ -34,9 +34,6 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
           null,
           null,
           null,
@@ -45,6 +42,23 @@
       },
       "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/viewing_spaces_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -96,6 +110,6 @@
         ]
       }
     },
-    "timestamp": 1582715668
+    "timestamp": 1582718624
   }
 }

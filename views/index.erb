@@ -15,7 +15,8 @@
   <button id="test-button">Test</button>
   <div id="test"></div></br>
 
-  <% @spaces.each do |space| %>
+  <% Space.all.each do |space| %>
+    <img src='<%= space.photo_url %>' height='420' width='auto'></br>
     Name: <%= space.name %></br>
     Description: <%= space.description %></br>
     Price per night: <%= space.price %></br></br>
