@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: lightblue;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-}
-
-f {
-  color: white;
-  text-align: center;
-
-</style>
+  <link type='text/css' rel='stylesheet' href='/css/styles.css'>
 </head>
 <body>
 
 <h1>Sign up below, friends!</h1>
 
-<form action="/users" method="post">
+<form action="/users" method="post" style="text-align: center;">
   <label for="name">Name:</label></br>
-  <input type="text" name="name" /></br>
+  <input type="text" name="name" required/></br>
   <label for="email">Email:</label></br>
-  <input type="email" name="email"/></br>
+  <input type="email" name="email" required/></br>
   <label for="password">Password:</label></br>
-  <input type="password" name="password"/></br>
+  <input type="password" name="password" required/></br>
   <input type="submit" value="Submit" />
 </form>
 

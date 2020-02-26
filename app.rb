@@ -11,8 +11,6 @@ class MakersBnB < Sinatra::Base
   enable :sessions
 
   get '/' do
-    @spaces = Space.all
-    p @spaces
     erb :index
   end
 
@@ -35,7 +33,6 @@ class MakersBnB < Sinatra::Base
 
   get '/sign_up' do
     erb :sign_up
-    
   end
 
   get '/session/new' do 
@@ -51,15 +48,12 @@ class MakersBnB < Sinatra::Base
 
   
   post '/users' do
-    @users = User.all
-    p @users
-    p params
     User.create(name: params['name'], email: params['email'], password: params['password'])
     redirect '/welcome'
   end
 
   get '/welcome' do
-    "Welcome, Meg"
+    "Welcome, #{User.all.last.name}"
   end
   
   run! if app_file == $0

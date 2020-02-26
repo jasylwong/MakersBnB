@@ -15,14 +15,15 @@
   <button id="test-button">Test</button>
   <div id="test"></div></br>
 
-  <% @spaces.each do |space| %>
+  <% Space.all.each do |space| %>
     Name: <%= space.name %></br>
     Description: <%= space.description %></br>
     Price per night: <%= space.price %></br></br>
   <% end %>
 
   </br></br>
-  <a href="/sign_up">Sign up </a>
+  <a href="/sign_up">Sign up </a></br>
+  <a href="/#">Log in</a>
 </body>
 </html>
 

@@ -1,12 +1,11 @@
 describe 'Space' do
     describe '.create' do
         it 'allow the user to add a new space' do
-            space = Space.create(name: 'Space Mansion', description: 'Lovely space', price: 40)
+            space = Space.create(name: 'Space Place', description: 'Lovely space', price: 40)
             expect(space).to be_a Space
-            expect(space.name).to eq "Space Mansion"
+            expect(space.name).to eq "Space Place"
             expect(space.description).to include "Lovely space"
             expect(space.price).to eq 40
-            #expect(space.host).to include "Mr Host"
         end
     end
 
