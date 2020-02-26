@@ -1,6 +1,21 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/create_space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/sign_up_spec.rb": {
         "lines": [
           1,
@@ -82,6 +97,6 @@
         ]
       }
     },
-    "timestamp": 1582710278
+    "timestamp": 1582713004
   }
 }

@@ -24,12 +24,13 @@ class MakersBnB < Sinatra::Base
     # "space_1 Space Mansion £50 Lovely space!"
   end
 
-  post '/spaces' do
-    redirect('/spaces')
-  end
-
   get '/spaces/new' do
     erb :spaces_new
+  end
+
+  post '/spaces' do
+    Space.create(name: params['name'], description: params['description'], price: params['price'])
+    redirect('/')
   end
 
   get '/sign_up' do

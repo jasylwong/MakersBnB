@@ -16,7 +16,9 @@
   <div id="test"></div></br>
 
   <% @spaces.each do |space| %>
-    <%= space.name %>
+    Name: <%= space.name %></br>
+    Description: <%= space.description %></br>
+    Price per night: <%= space.price %></br></br>
   <% end %>
 
   </br></br>
