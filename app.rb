@@ -38,6 +38,18 @@ class MakersBnB < Sinatra::Base
     
   end
 
+  get '/session/new' do 
+    erb ":session/new"
+  end
+
+  post '/sessions' do 
+    user = User.authenticate(email: params[:email], password: params[:password])
+    session[]
+    User.find(name: params['name'], email: params['email'], password: params['password'])
+      #Working progress 
+  end
+
+  
   post '/users' do
     @users = User.all
     p @users
