@@ -24,19 +24,13 @@ ActiveRecord::Schema.define(version: 2020_02_24_210239) do
     t.index ["users_id"], name: "index_bookings_on_users_id"
   end
 
-  create_table "listings", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
-    t.bigint "users_id"
-    t.bigint "spaces_id"
-    t.index ["spaces_id"], name: "index_listings_on_spaces_id"
-    t.index ["users_id"], name: "index_listings_on_users_id"
-  end
-
   create_table "spaces", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "price"
+    t.string "photo_url"
+    t.date "available_from"
+    t.date "available_to"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_spaces_on_user_id"
   end
@@ -50,7 +44,5 @@ ActiveRecord::Schema.define(version: 2020_02_24_210239) do
 
   add_foreign_key "bookings", "spaces", column: "spaces_id"
   add_foreign_key "bookings", "users", column: "users_id"
-  add_foreign_key "listings", "spaces", column: "spaces_id"
-  add_foreign_key "listings", "users", column: "users_id"
   add_foreign_key "spaces", "users"
 end
