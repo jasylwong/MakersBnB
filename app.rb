@@ -39,14 +39,12 @@ class MakersBnB < Sinatra::Base
 
   post '/users' do
     @users = User.all
-    p @users
-    p params
     User.create(name: params['name'], email: params['email'], password: params['password'])
     redirect '/welcome'
   end
 
   get '/welcome' do
-    "Welcome, Meg"
+    "Welcome, #{User.all.last.name}"
   end
   
   run! if app_file == $0
