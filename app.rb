@@ -5,7 +5,6 @@ require 'sinatra/flash'
 require './models/booking.rb'
 require './models/space.rb'
 require './models/user.rb'
-require './models/listing.rb'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
