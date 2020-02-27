@@ -19,12 +19,16 @@
     <input type="submit" value='Sign out' />
   </form>
 
-  <% Space.all.each do |space| %>
+  <% Space.all.each do |space| %> 
+  <% if space.user_id != User.find_by(id: session[:user_id]).id%>
     <img src='<%= space.photo_url %>' height='420' width='auto'></br>
-    Name: <%= space.name %></br>
+    <form action="/bookings" method="post" >
+   Name: <input type="submit" name="choice" value='<%=space.name%>' /> 
+  </form>
     Description: <%= space.description %></br>
     Price per night: <%= space.price %></br></br>
-  <% end %>
+  <% end 
+  end%>
   
 </body>
 </html>

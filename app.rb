@@ -28,11 +28,12 @@ class MakersBnB < Sinatra::Base
 
   post '/spaces' do
     Space.create(name: params['name'], description: params['description'], price: params['price'], photo_url: params['photo_url'], user: User.find_by(id: session[:user_id]))
-    redirect('/')
+    redirect('/spaces')
   end
 
   get '/sign_up' do
     erb :sign_up
+
   end
 
   get '/login' do
@@ -55,7 +56,7 @@ class MakersBnB < Sinatra::Base
   
   post '/users' do
     User.create(name: params['name'], email: params['email'], password: params['password'])
-    redirect '/welcome'
+    redirect '/sessions/new'
   end
 
   get '/welcome' do
@@ -67,6 +68,21 @@ class MakersBnB < Sinatra::Base
     flash[:notice2] = "You have successfully signed out"
     redirect('/sessions/new')
   end
+
+  get '/bookings' do
+    # @space = session[:space_id] 
+    erb :bookings
+  end
+
+  post '/bookings' do 
+    p "TEst"
+    p params[:choice]
+    session[:space_id] = Space.find_by(name: params[:choice]).id
+    p "session ID"
+    p session[:space_id]
+    redirect ('/bookings')
+  end
+
   
   run! if app_file == $0
 end 
