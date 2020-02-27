@@ -78,6 +78,11 @@ class MakersBnB < Sinatra::Base
     redirect ('/bookings')
   end
 
+  post "/requests" do
+
+  end
+    
+
   
   run! if app_file == $0
 end 

@@ -13,13 +13,11 @@
   <h1>MakersBnB</h1>
 <%= Space.find_by(id: session[:space_id]).name %>
       
-<form action="/bookings" method="post" >
+<form action="/requests" method="post" >
 
-  <label for="start_date">Start date:</label>
-  <input type="date" id="start_date" name="start date">
-  <label for="end_date">End date:</label>
-  <input type="date" id="end_date" name="end date">
-  <input type="submit" value="Submit">
+  <label for="booking_date">Booking date:</label>
+  <input type="date" name="booking_date">
+  <input type="submit" value="Submit Dates">
 </form>
   </br></br>
 </body>
