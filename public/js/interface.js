@@ -20,4 +20,8 @@ $( document ).ready(function() {
     console.log("hello")
     $('#test').text(5);
   });
+
 });
+
+  
+  available_from.min = new Date().toISOString().split("T")[0];
