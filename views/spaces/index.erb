@@ -19,6 +19,13 @@
     <input type="submit" value='Sign out' />
   </form>
 
+  <form action="/requests" method="post">
+    <input type="submit" value='View requests' />
+  </form>
+
+
+
+
   <% Space.all.each do |space| %>
     <img src='<%= space.photo_url %>' height='420' width='auto'></br>
     Name: <%= space.name %></br>

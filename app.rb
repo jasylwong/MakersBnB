@@ -55,9 +55,15 @@ class MakersBnB < Sinatra::Base
     end
   end
   
+  post '/requests' do
+    "Hi, #{User.all.last.name}. Here are you requests"
+    erb :"requests"
+  end
+
+
   post '/users' do
     User.create(name: params['name'], email: params['email'], password: params['password'])
-    redirect '/welcome'
+    redirect '/login'
   end
 
   get '/welcome' do
