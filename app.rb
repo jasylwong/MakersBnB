@@ -70,22 +70,14 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/bookings' do
-    # @space = session[:space_id] 
     erb :bookings
   end
 
   post '/bookings' do 
-    p "TEst"
-    p params[:choice]
     session[:space_id] = Space.find_by(name: params[:choice]).id
-    p "session ID"
-    p session[:space_id]
     redirect ('/bookings')
   end
 
   
   run! if app_file == $0
 end 
-
-
-
