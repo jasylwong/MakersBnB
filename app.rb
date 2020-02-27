@@ -48,7 +48,7 @@ class MakersBnB < Sinatra::Base
       session[:user_id] = User.find_by(email: params['email']).id
       redirect('/spaces')
     else
-      flash[:notice] = 'Wrong credentials, dummy! :( '
+      flash[:notice1] = 'Wrong credentials, dummy! :( '
       redirect('/sessions/new')
     end
   end
@@ -61,6 +61,12 @@ class MakersBnB < Sinatra::Base
 
   get '/welcome' do
     "Welcome, #{User.all.last.name}"
+  end
+
+  post '/sessions/destroy' do
+    session.clear
+    flash[:notice2] = "You have successfully signed out"
+    redirect('/sessions/new')
   end
   
   run! if app_file == $0

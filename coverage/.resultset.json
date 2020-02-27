@@ -16,6 +16,23 @@
           null
         ]
       },
+      "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/logging_out_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/student/Programming/Makers/Projects/MakersBnB/spec/features/logging_page_spec.rb": {
         "lines": [
           1,
@@ -165,6 +182,6 @@
         ]
       }
     },
-    "timestamp": 1582762378
+    "timestamp": 1582796737
   }
 }
