@@ -8,13 +8,14 @@ require './models/user.rb'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     erb :index
   end
 
   get '/spaces' do
-    @spaces = Space.all
+    erb :"/spaces/index"
     # @get_spaces = {}
     # @spaces.each { |space| @get_spaces[space.name] = space.description }
     # @get_spaces.to_json
@@ -38,15 +39,18 @@ class MakersBnB < Sinatra::Base
     erb :login
   end
 
-  get '/session/new' do 
-    erb ":session/new"
+  get '/sessions/new' do 
+    erb :"sessions/new"
   end
 
   post '/sessions' do 
-    user = User.authenticate(email: params[:email], password: params[:password])
-    session[]
-    User.find(name: params['name'], email: params['email'], password: params['password'])
-      #Working progress 
+    if User.where(email: params['email'], password: params['password']).exists?
+      session[:user_id] = User.find_by(email: params['email']).id
+      redirect('/spaces')
+    else
+      flash[:notice] = 'Wrong credentials, dummy! :( '
+      redirect('/sessions/new')
+    end
   end
 
   

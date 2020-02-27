@@ -1,16 +1,16 @@
 feature 'logging in' do
   scenario 'Login' do
     visit('/login')
-      expect(page).to have_content("Login in below")
+    expect(current_path).to eq '/login'
+    expect(page).to have_content("Login in below")
   end
 end
 
 feature 'enter details' do
   scenario 'user enters details' do
     visit('/login')
-    expect(current_path).to eq '/login'
-    expect(page).to have_content('Login in below')
-    
+    # expect(current_path).to eq '/login' # Moved to test above
+    # expect(page).to have_content('Login in below') # Moved to test above
     
     fill_in('email', with: 'email@meg.com')
     fill_in('password', with: '12345678')

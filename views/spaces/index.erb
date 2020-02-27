@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Homepage</title>
+  <title>Spaces</title>
   <link type='text/css' rel='stylesheet' href='/css/styles.css'>
 </head>
 <body>
@@ -12,8 +12,8 @@
   <script src="/js/interface.js"></script>
   
   <h1>MakersBnB</h1>
-  <button id="test-button">Test</button>
-  <div id="test"></div></br>
+
+  <h2>Welcome <%= User.find_by(id: session[:user_id]).name %></h2>
 
   <% Space.all.each do |space| %>
     <img src='<%= space.photo_url %>' height='420' width='auto'></br>
@@ -24,7 +24,7 @@
 
   </br></br>
   <a href="/sign_up">Sign up </a></br>
-  <a href="/sessions/new">Log in</a>
+  <a href="/#">Log in</a>
 </body>
 </html>
 

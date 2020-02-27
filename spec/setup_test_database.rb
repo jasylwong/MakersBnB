@@ -4,5 +4,5 @@ def setup_test_database
 
 connection = PG.connect(dbname: "makers_bnb_test")
 
-connection.exec("TRUNCATE spaces,listings,users,bookings; ")
+connection.exec("TRUNCATE spaces,users,bookings; ")
 end

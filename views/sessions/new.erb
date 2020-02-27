@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+  <link type='text/css' rel='stylesheet' href='/css/styles.css'>
+
+<!-- <style>
 body {
   background-color: lightblue;
 }
@@ -15,11 +17,14 @@ f {
   color: white;
   text-align: center;
 
-</style>
+</style> -->
+
 </head>
 <body>
 
 <h1>Login in below, friends!</h1>
+
+<h2><%= flash[:notice] %></h2>
 
 <form action="/sessions" method="post">
 
