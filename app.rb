@@ -35,6 +35,12 @@ class MakersBnB < Sinatra::Base
     erb :sign_up
   end
 
+  post '/users' do
+    User.create(name: params['name'], email: params['email'], password: params['password'])
+    session[:user_id] = User.find_by(email: params['email']).id
+    redirect('/spaces')
+  end
+
   get '/sessions/new' do 
     erb :"sessions/new"
   end
@@ -54,18 +60,6 @@ class MakersBnB < Sinatra::Base
     erb :"requests"
   end
 
-
-  post '/users' do
-    User.create(name: params['name'], email: params['email'], password: params['password'])
-    redirect '/sessions/new'
-  end
-
-  post '/sessions/destroy' do
-    session.clear
-    flash[:notice2] = "You have successfully signed out"
-    redirect('/sessions/new')
-  end
-
   get '/bookings' do
     erb :bookings
   end
@@ -77,5 +71,11 @@ class MakersBnB < Sinatra::Base
 
   post "/requests" do
 
+  end
+
+  post '/sessions/destroy' do
+    session.clear
+    flash[:notice2] = "You have successfully signed out"
+    redirect('/sessions/new')
   end
 end 

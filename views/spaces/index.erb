@@ -14,7 +14,9 @@
   <h1>MakersBnB</h1>
 
   <h2>Welcome <%= User.find_by(id: session[:user_id]).name %></h2>
-  <a href='/spaces/new'><button>Create new space</button></a>
+  <form action="/spaces/new">
+    <input type="submit" value='Create new space' />
+  </form>
   <form action="/sessions/destroy" method="post">
     <input type="submit" value='Sign out' />
   </form>
@@ -27,8 +29,8 @@
       </form>
       Description: <%= space.description %></br>
       Price per night: <%= space.price %></br></br>
-    <% end 
-  end%>
+    <% end %>
+  <% end %>
   
 </body>
 </html>

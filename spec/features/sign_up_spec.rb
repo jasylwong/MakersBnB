@@ -12,8 +12,7 @@ feature 'enter details' do
     fill_in('email', with: 'email@meg.com')
     fill_in('password', with: '12345678')
     click_button('Submit')
-    expect(current_path).to eq '/sessions/new'
-     
+    expect(current_path).to eq '/spaces'
   end
 
   # scenario 'user enters email already taken' do

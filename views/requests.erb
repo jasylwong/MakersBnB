@@ -4,19 +4,39 @@
 </head>
 <body>
 
-<h1>Here are your requests</h1>
+  <h1>Here are your requests</h1>
 
+  <form action="/sessions/destroy" method="post">
+  <input type="submit" value='Sign out' />
+  </form>
 
+  <form action="/spaces/index" method="post">
+  <input type="submit" value='Home' />
+  </form>
 
-<form action="/sessions/destroy" method="post">
-<input type="submit" value='Sign out' />
-</form>
+  <a href="/spaces">Homepage</a></br>
 
-<form action="/spaces/index" method="post">
-<input type="submit" value='Home' />
-</form>
+  <h2>Requests I've made:</h2>
 
-<a href="/spaces">Homepage</a></br>
+  <% Booking.all.each do |booking| %> 
+    <% if booking.users_id == session[:user_id] %> 
+      Name: <%= Space.find_by(id: booking.space_id).name %> 
+      Description: <%= Space.find_by(id: booking.space_id).price %></br>
+      Price per night: <%= Space.find_by(id: booking.space_id).price %></br>
+      Status: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></br></br>
+    <% end %>
+  <% end %>
+
+  <h2>Requests I've received:</h2>
+
+  <% Booking.all.each do |booking| %> 
+    <% if Space.find_by(id: booking.spaces_id).user_id == session[:user_id] %> 
+      Name: <%= Space.find_by(id: booking.space_id).name %> 
+      Description: <%= Space.find_by(id: booking.space_id).price %></br>
+      Price per night: <%= Space.find_by(id: booking.space_id).price %></br>
+      Status: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></br></br>
+    <% end %>
+  <% end %>
 
 </body>
 </html>
