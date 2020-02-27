@@ -33,11 +33,6 @@ class MakersBnB < Sinatra::Base
 
   get '/sign_up' do
     erb :sign_up
-
-  end
-
-  get '/login' do
-    erb :login
   end
 
   get '/sessions/new' do 
@@ -62,15 +57,7 @@ class MakersBnB < Sinatra::Base
 
   post '/users' do
     User.create(name: params['name'], email: params['email'], password: params['password'])
-<<<<<<< HEAD
-    redirect '/login'
-=======
     redirect '/sessions/new'
->>>>>>> b536336c8805ad520176062069b3c50c8aad0357
-  end
-
-  get '/welcome' do
-    "Welcome, #{User.all.last.name}"
   end
 
   post '/sessions/destroy' do
@@ -91,8 +78,4 @@ class MakersBnB < Sinatra::Base
   post "/requests" do
 
   end
-    
-
-  
-  run! if app_file == $0
 end 

@@ -19,26 +19,15 @@
     <input type="submit" value='Sign out' />
   </form>
 
-<<<<<<< HEAD
-  <form action="/requests" method="post">
-    <input type="submit" value='View requests' />
-  </form>
-
-
-
-
-  <% Space.all.each do |space| %>
-=======
   <% Space.all.each do |space| %> 
-  <% if space.user_id != User.find_by(id: session[:user_id]).id%>
->>>>>>> b536336c8805ad520176062069b3c50c8aad0357
-    <img src='<%= space.photo_url %>' height='420' width='auto'></br>
-    <form action="/bookings" method="post" >
-   Name: <input type="submit" name="choice" value='<%=space.name%>' /> 
-  </form>
-    Description: <%= space.description %></br>
-    Price per night: <%= space.price %></br></br>
-  <% end 
+    <% if space.user_id != User.find_by(id: session[:user_id]).id%>
+      <img src='<%= space.photo_url %>' height='420' width='auto'></br>
+      <form action="/bookings" method="post" >
+        Name: <input type="submit" name="choice" value='<%=space.name%>' /> 
+      </form>
+      Description: <%= space.description %></br>
+      Price per night: <%= space.price %></br></br>
+    <% end 
   end%>
   
 </body>
