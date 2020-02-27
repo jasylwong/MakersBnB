@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2020_02_24_210239) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
+    t.date "booking_date"
     t.bigint "users_id"
     t.bigint "spaces_id"
+    t.boolean "confirmed"
     t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
     t.index ["users_id"], name: "index_bookings_on_users_id"
   end

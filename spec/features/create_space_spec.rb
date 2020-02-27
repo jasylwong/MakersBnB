@@ -1,6 +1,7 @@
 feature 'creating spaces' do
   scenario 'a user can create a space' do
     visit 'spaces/new'
+    p "CHECK THIS LING"
     fill_in('name', with: 'Cool Space')
     fill_in('description', with: 'This is a darn cool place')
     fill_in('price', with: 45)
