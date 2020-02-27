@@ -8,4 +8,4 @@ feature 'creating spaces' do
     expect(current_path).to eq '/'
     expect(page).to have_content('Cool Space')
   end
-end
+end   
