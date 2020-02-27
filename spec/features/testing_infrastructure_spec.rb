@@ -4,4 +4,3 @@ feature 'testing infrastructure' do
     expect(page).to have_content("MakersBnB")
   end
 end
-

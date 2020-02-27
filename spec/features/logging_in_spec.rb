@@ -8,5 +8,3 @@ feature 'logging in' do
     # extra include persons name grab from users database 
   end
 end
-
-

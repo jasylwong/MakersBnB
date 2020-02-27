@@ -10,4 +10,3 @@ feature 'logging out' do
     expect(page).to have_content('You have successfully signed out')    
   end
 end
-

@@ -1,7 +1,7 @@
 feature 'sign-up' do
   scenario 'shows sign up message' do
     visit('/sign_up')
-      expect(page).to have_content("Sign up below")
+    expect(page).to have_content("Sign up below")
   end
 end
 
@@ -30,5 +30,3 @@ feature 'enter details' do
   #   expect(page).to have_content "This email has already been used."
   # end
 end
-
-

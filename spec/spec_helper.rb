@@ -16,11 +16,11 @@ SimpleCov.start
 
 Capybara.app = MakersBnB
 
- ENV['ENVIRONMENT'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
- DB_ENV ||= 'test'
- connection_details = YAML::load(File.open('./config/database.yml'))
- ActiveRecord::Base.establish_connection(connection_details[DB_ENV])
+DB_ENV ||= 'test'
+connection_details = YAML::load(File.open('./config/database.yml'))
+ActiveRecord::Base.establish_connection(connection_details[DB_ENV])
 
 RSpec.configure do |config|
   config.before(:each) do

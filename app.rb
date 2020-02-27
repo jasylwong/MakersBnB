@@ -28,7 +28,7 @@ class MakersBnB < Sinatra::Base
 
   post '/spaces' do
     Space.create(name: params['name'], description: params['description'], price: params['price'], photo_url: params['photo_url'], user: User.find_by(id: session[:user_id]))
-    redirect('/spaces')
+    redirect '/spaces'
   end
 
   get '/sign_up' do
@@ -38,7 +38,7 @@ class MakersBnB < Sinatra::Base
   post '/users' do
     User.create(name: params['name'], email: params['email'], password: params['password'])
     session[:user_id] = User.find_by(email: params['email']).id
-    redirect('/spaces')
+    redirect '/spaces'
   end
 
   get '/sessions/new' do 
@@ -48,10 +48,10 @@ class MakersBnB < Sinatra::Base
   post '/sessions' do 
     if User.where(email: params['email'], password: params['password']).exists?
       session[:user_id] = User.find_by(email: params['email']).id
-      redirect('/spaces')
+      redirect '/spaces'
     else
       flash[:notice1] = 'Wrong credentials, dummy! :( '
-      redirect('/sessions/new')
+      redirect '/sessions/new'
     end
   end
   
@@ -66,7 +66,7 @@ class MakersBnB < Sinatra::Base
 
   post '/bookings' do 
     session[:space_id] = Space.find_by(name: params[:choice]).id
-    redirect ('/bookings')
+    redirect '/bookings'
   end
 
   post "/requests" do
@@ -76,6 +76,6 @@ class MakersBnB < Sinatra::Base
   post '/sessions/destroy' do
     session.clear
     flash[:notice2] = "You have successfully signed out"
-    redirect('/sessions/new')
+    redirect '/sessions/new'
   end
-end 
+end
