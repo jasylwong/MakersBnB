@@ -10,6 +10,10 @@ class MakersBnB < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
 
+  get '/landing_page' do
+    erb :"landing_page/landing_page"
+  end
+
   get '/' do
     erb :index
   end
@@ -69,8 +73,8 @@ class MakersBnB < Sinatra::Base
     redirect '/bookings'
   end
 
-  post "/requests" do
-
+  get "/requests" do
+     erb :requests
   end
 
   post '/sessions/destroy' do

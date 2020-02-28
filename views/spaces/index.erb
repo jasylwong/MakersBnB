@@ -9,18 +9,21 @@
 
 </head>
 <body>
+<center>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="/js/interface.js"></script>
   
-  <h1>MakersBnB</h1>
+  <h1><font size="102">MakersBnB</font></h1>
 
-  <h2>Welcome <%= User.find_by(id: session[:user_id]).name %></h2>
+  <h2><font size="75">Welcome, <%= User.find_by(id: session[:user_id]).name %></font></h2>
   <form action="/spaces/new">
     <input type="submit" value='Create new space' />
   </form>
   <form action="/sessions/destroy" method="post">
     <input type="submit" value='Sign out' />
   </form>
+
+  <a href="/requests">Your Requests</a></br>
 
   <% Space.all.each do |space| %> 
     <% if space.user_id != User.find_by(id: session[:user_id]).id%>
