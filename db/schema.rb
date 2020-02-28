@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 2020_02_24_210239) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "booking_date"
-    t.bigint "users_id"
-    t.bigint "spaces_id"
+    t.bigint "user_id"
+    t.bigint "space_id"
     t.boolean "confirmed"
-    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
-    t.index ["users_id"], name: "index_bookings_on_users_id"
+    t.index ["space_id"], name: "index_bookings_on_space_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "spaces", force: :cascade do |t|
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_210239) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "bookings", "spaces", column: "spaces_id"
-  add_foreign_key "bookings", "users", column: "users_id"
+  add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "users"
   add_foreign_key "spaces", "users"
 end
