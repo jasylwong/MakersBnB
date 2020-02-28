@@ -17,8 +17,17 @@ feature 'creating spaces' do
     click_button('Submit')
     expect(current_path).to eq '/spaces'
 
-    expect(page).to have_content("Cool Space")
-    expect(page).to have_content("2020-03-01")
-    expect(page).to have_content("2020-05-01")
+    click_button('Sign out')
+    click_button('Homepage')
+
+    click_link('Sign up')
+    fill_in('name', with: 'Jack')
+    fill_in('email', with: 'email@jack.com')
+    fill_in('password', with: '12345678')
+    click_button('Submit')
+
+    expect(page).to have_content("This is a darn cool place")
+    expect(page).to have_content("45")
+    
   end
 end   
