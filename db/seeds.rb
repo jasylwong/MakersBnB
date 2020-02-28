@@ -13,12 +13,14 @@ end
 
 # Space seeds -----------------------------------------
 space_list = [
-  ["Casa Bonita", "Muy buena", 50, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-03-11", "2020-04-11", User.find_by(id: 1)],
-  ["Space 2", "Great!", 45, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-02-12", "2020-04-13", User.find_by(id: 1)],
-  ["Rad resort", "Totally rad", 30, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-03-11", "2020-04-11", User.find_by(id: 1)],
-  ["Happy house", "Very happy", 75, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-03-11", "2020-04-11", User.find_by(id: 2)],
-  ["Cat Castle", "Lots of cats", 99.99, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-03-11", "2020-04-11", User.find_by(id: 2)],
-  ["Misty Mountain", "Somewhat foggy", 13, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-03-11", "2020-04-11", User.find_by(id: 3)],
+  ["Casa Pablo", "Just the best", 50, "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-03-11", "2020-04-11", User.find_by(id: 1)],
+  ["Pug Palace", "Pugs in blankets", 50, "https://images.pexels.com/photos/374898/pexels-photo-374898.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", "2020-03-11", "2020-04-11", User.find_by(id: 1)],
+  ["Casa Bonita", "Muy buena", 50, "https://images.pexels.com/photos/2884867/pexels-photo-2884867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-03-11", "2020-04-11", User.find_by(id: 1)],
+  ["Space 2", "Great!", 45, "https://images.pexels.com/photos/827518/pexels-photo-827518.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-02-12", "2020-04-13", User.find_by(id: 1)],
+  ["Rad resort", "Totally rad", 30, "https://images.pexels.com/photos/1019980/pexels-photo-1019980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-03-11", "2020-04-11", User.find_by(id: 1)],
+  ["Happy house", "Very happy", 75, "https://images.pexels.com/photos/2067638/pexels-photo-2067638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-03-11", "2020-04-11", User.find_by(id: 2)],
+  ["Cat Castle", "Lots of cats", 99.99, "https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-03-11", "2020-04-11", User.find_by(id: 2)],
+  ["Misty Mountain", "Somewhat foggy", 13, "https://images.pexels.com/photos/3363341/pexels-photo-3363341.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "2020-03-11", "2020-04-11", User.find_by(id: 3)],
   ["Fab flat", "Ab fab", 66, "https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg", "2020-03-11", "2020-04-11", User.find_by(id: 4)]
 ]
 
