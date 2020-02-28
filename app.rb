@@ -69,8 +69,8 @@ class MakersBnB < Sinatra::Base
     redirect '/bookings'
   end
 
-  post "/requests" do
-
+  get "/requests" do
+     erb :requests
   end
 
   post '/sessions/destroy' do

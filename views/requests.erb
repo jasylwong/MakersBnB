@@ -10,11 +10,9 @@
   <input type="submit" value='Sign out' />
   </form>
 
-  <form action="/spaces/index" method="post">
-  <input type="submit" value='Home' />
+  <form action="/spaces">
+  <input type="submit" value="Homepage">
   </form>
-
-  <a href="/spaces">Homepage</a></br>
 
   <h2>Requests I've made:</h2>
 
@@ -37,6 +35,8 @@
       Status: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></br></br>
     <% end %>
   <% end %>
+
+
 
 </body>
 </html>
