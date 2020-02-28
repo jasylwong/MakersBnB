@@ -19,7 +19,7 @@
   <h2>Requests I've made:</h2>
 
   <% Booking.all.each do |booking| %> 
-    <% if booking.users_id == session[:user_id] %> 
+    <% if booking.user_id == session[:user_id] %> 
       Name: <%= Space.find_by(id: booking.space_id).name %> 
       Description: <%= Space.find_by(id: booking.space_id).price %></br>
       Price per night: <%= Space.find_by(id: booking.space_id).price %></br>
