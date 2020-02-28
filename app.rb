@@ -11,6 +11,7 @@ class MakersBnB < Sinatra::Base
   register Sinatra::Flash
 
   get '/' do
+    Booking.create(booking_date: "2020-12-25", user: User.find_by(name: "Jason"), space_id: Space.find_by(id: 2), confirmed: 'false')
     erb :index
   end
 
@@ -56,8 +57,7 @@ class MakersBnB < Sinatra::Base
   end
   
   post '/requests' do
-    # Booking.create(booking_date: params[:booking_date], user: User.find_by(id: session[:user_id]), space_id: Space.find_by(id: session[:space_id]), confirmed: 'false')
-    "Hi, #{User.all.last.name}. Here are you requests"
+    Booking.create(booking_date: params[:booking_date], user: User.find_by(id: session[:user_id]), space_id: Space.find_by(id: session[:space_id]), confirmed: 'false')
     erb :requests
   end
 
@@ -69,8 +69,6 @@ class MakersBnB < Sinatra::Base
     session[:space_id] = Space.find_by(name: params[:choice]).id
     redirect '/bookings'
   end
-
-  ["2020-04-12", User.find_by(id: 5), Space.find_by(id: 1), "false"]
 
   post "/requests" do
 
