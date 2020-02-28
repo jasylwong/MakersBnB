@@ -25,7 +25,7 @@ html, body {
 
 .right {
   left: 50%;
-  background: lightblue;
+  background: rgb(188, 225, 238);
 }
 
 .nav {
