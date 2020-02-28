@@ -37,5 +37,5 @@ booking_list = [
 ]
 
 booking_list.each do |date, user, space, confirmed|
-  Booking.create( booking_date: date, user: user, space_id: space, confirmed: confirmed)
+  Booking.create( booking_date: date, user: user, space: space, confirmed: confirmed)
 end

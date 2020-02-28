@@ -20,9 +20,9 @@
 
   <% Booking.all.each do |booking| %> 
     <% if booking.user_id == session[:user_id] %> 
-      Name: <%= Space.find_by(id: booking.space_id).name %> 
-      Description: <%= Space.find_by(id: booking.space_id).price %></br>
-      Price per night: <%= Space.find_by(id: booking.space_id).price %></br>
+      Name: <%= Space.find_by(id: booking.space).name %> 
+      Description: <%= Space.find_by(id: booking.space).price %></br>
+      Price per night: <%= Space.find_by(id: booking.space).price %></br>
       Status: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></br></br>
     <% end %>
   <% end %>
@@ -30,10 +30,10 @@
   <h2>Requests I've received:</h2>
 
   <% Booking.all.each do |booking| %> 
-    <% if Space.find_by(id: booking.spaces_id).user_id == session[:user_id] %> 
-      Name: <%= Space.find_by(id: booking.space_id).name %> 
-      Description: <%= Space.find_by(id: booking.space_id).price %></br>
-      Price per night: <%= Space.find_by(id: booking.space_id).price %></br>
+    <% if Space.find_by(id: booking.space).user_id == session[:user_id] %> 
+      Name: <%= Space.find_by(id: booking.space).name %> 
+      Description: <%= Space.find_by(id: booking.space).price %></br>
+      Price per night: <%= Space.find_by(id: booking.space).price %></br>
       Status: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></br></br>
     <% end %>
   <% end %>
