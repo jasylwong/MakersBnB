@@ -10,6 +10,10 @@ class MakersBnB < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
 
+  get '/landing_page' do
+    erb :"landing_page/landing_page"
+  end
+
   get '/' do
     erb :index
   end
