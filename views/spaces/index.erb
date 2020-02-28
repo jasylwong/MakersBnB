@@ -9,12 +9,13 @@
 
 </head>
 <body>
+<center>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="/js/interface.js"></script>
   
-  <h1>MakersBnB</h1>
+  <h1><font size="102">MakersBnB</font></h1>
 
-  <h2>Welcome <%= User.find_by(id: session[:user_id]).name %></h2>
+  <h2><font size="75">Welcome, <%= User.find_by(id: session[:user_id]).name %></font></h2>
   <form action="/spaces/new">
     <input type="submit" value='Create new space' />
   </form>

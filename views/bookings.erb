@@ -8,18 +8,20 @@
   <link type='text/css' rel='stylesheet' href='/css/styles.css'>
 </head>
 <body>
+<center>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="/js/interface.js"></script>
   
-  <h1>MakersBnB</h1>
+  <h1><font size="102">MakersBnB</h1>
   <%= Space.find_by(id: session[:space_id]).name %>
       
   <form action="/requests" method="post" >
     <label for="booking_date">Booking date:</label>
     <input type="date" id="booking_date" name="booking_date">
     <input type="submit" value="Submit Dates">
-  </form>
+  </font></form>
   </br></br>
+
 </body>
 </html>
 
