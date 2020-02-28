@@ -16,7 +16,7 @@ feature 'logging in' do
     fill_in('password', with: '12345678')
     click_button('Submit')
     expect(current_path).to eq '/spaces'
-    expect(page).to have_content("Welcome Meg")
+    expect(page).to have_content("Welcome, Meg")
 
     # extra include persons name grab from users database 
   end
